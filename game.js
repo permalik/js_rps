@@ -7,6 +7,8 @@ export function game() {
   const userScoreCard = document.querySelector('.user-score');
   const compScoreCard = document.querySelector('.comp-score');
   const result = document.querySelector('.result');
+  const resultSection = document.querySelector('.result-section');
+  const scoreBoard = document.querySelector('.score-board');
   const winnerDisplay = document.querySelector('.winner-display');
   const hideMoves = document.querySelector('.move-list');
 
@@ -17,13 +19,12 @@ export function game() {
 
       round(userMove, compMove);
 
-      logTest();
-
       if (userScore == 5 || compScore == 5) {
+        hideScoreMetrics();
         if (userScore > compScore) {
-          winnerBanner('USER WIN');
+          winnerBanner("You're Victorious!");
         } else {
-          winnerBanner('COMP WIN');
+          winnerBanner('The computer beat you..');
         }
         removeMoves();
         setTimeout(() => {
@@ -68,6 +69,11 @@ export function game() {
 
   function displayResult(string) {
     result.textContent = string;
+  }
+
+  function hideScoreMetrics() {
+    resultSection.style.display = 'none';
+    scoreBoard.style.display = 'none';
   }
 
   function winnerBanner(string) {

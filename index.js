@@ -1,7 +1,7 @@
 import { colorFlip } from './colorflip.js';
 import { game } from './game.js';
 const play = document.querySelector('.play');
-const showMoves = document.querySelector('.move-list');
+const moveOptions = document.querySelectorAll('.move-option');
 
 ('strict');
 
@@ -18,5 +18,7 @@ function hidePlay() {
 }
 
 function revealMoves() {
-  showMoves.style.display = 'block';
+  moveOptions.forEach(function (move) {
+    move.style.display = 'block';
+  });
 }

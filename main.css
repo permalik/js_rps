@@ -56,7 +56,7 @@ html {
 }
 
 body {
-  background: hsl(39, 85%, 95%);
+  background: hsl(0, 0%, 83%);
 }
 
 .title-section {
@@ -108,17 +108,22 @@ body {
 
 .move-list {
   display: flex;
-  display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 5rem;
 }
 
 .move-option {
-  color: darkred;
-  background: hsla(0, 0%, 0%, 0.377);
+  color: hsl(347, 100%, 33%);
+  background: hsla(0, 0%, 0%, 0.219);
   font-size: 2rem;
+  font-weight: 900;
   border: none;
   border-radius: 5px;
   box-shadow: var(--regShadow);
+  display: none;
   padding: calc(10vw + 4rem);
   cursor: pointer;
 }
@@ -139,10 +144,21 @@ body {
 }
 
 .result-section {
+  margin-bottom: 2rem;
   padding: 1rem;
 }
 
 .result {
+  color: hsl(165, 67%, 36%);
+  font-size: 2rem;
+}
+
+.score-board {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.score-board p {
   font-size: 1.5rem;
 }
 
@@ -150,9 +166,15 @@ body {
   margin-right: 1rem;
 }
 
-@media screen and (min-width: 880px) {
+.winner-display {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 1000px) {
   .move-list {
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .move-option {
