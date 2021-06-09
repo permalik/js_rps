@@ -1,0 +1,166 @@
+:root {
+  font-size: 62.5%;
+  --regShadow: hsl(41, 21%, 71%) 0px 3px 8px;
+  --hoverShadow: hsl(41, 21%, 71%) 3px 7px 12px;
+}
+
+/* mini reset */
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+caption,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre {
+  font-size: 100%;
+  font-weight: normal;
+
+  margin: 0;
+  padding: 0;
+
+  vertical-align: baseline;
+
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
+img {
+  border: 0;
+}
+
+html {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: hsl(39, 85%, 95%);
+}
+
+.title-section {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 2rem;
+}
+
+.game-heading {
+  font-size: 8rem;
+  font-weight: 900;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.play-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.play {
+  color: rgb(0, 143, 0);
+  background: transparent;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+  border: 2px solid hsla(120, 100%, 39%, 0.514);
+  border-radius: 5px;
+  box-shadow: var(--regShadow);
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.play:hover {
+  color: hsl(39, 85%, 95%);
+  background: hsla(120, 100%, 39%, 0.514);
+  box-shadow: var(--hoverShadow);
+}
+
+.move-list {
+  display: flex;
+  display: none;
+  flex-direction: column;
+}
+
+.move-option {
+  color: darkred;
+  background: hsla(0, 0%, 0%, 0.377);
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--regShadow);
+  padding: calc(10vw + 4rem);
+  cursor: pointer;
+}
+
+.move-option:hover {
+  color: white;
+  background: hsla(0, 100%, 27%, 0.356);
+  box-shadow: var(--hoverShadow);
+}
+
+.rock-option,
+.paper-option {
+  margin-bottom: 1rem;
+}
+
+.move-name {
+  width: 10rem;
+}
+
+.result-section {
+  padding: 1rem;
+}
+
+.result {
+  font-size: 1.5rem;
+}
+
+.user-score {
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 880px) {
+  .move-list {
+    flex-direction: row;
+  }
+
+  .move-option {
+    padding: 100px;
+  }
+
+  .rock-option,
+  .paper-option {
+    margin: 0 1rem 0 0;
+  }
+}

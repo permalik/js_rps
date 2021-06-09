@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSTest</title>
+    <title>RPS</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="main.css" />
   </head>
-  <body></body>
-  <script src="/jsTest.js"></script>
+  <body class="body">
+    <header class="title-section">
+      <h1 class="game-heading">RPS</h1>
+    </header>
+    <div class="page-wrap">
+      <section class="play-section">
+        <button class="play">PLAY</button>
+      </section>
+      <section class="move-list">
+        <button class="move-option rock-option">
+          <p class="move-name rock">ROCK</p>
+        </button>
+        <button class="move-option paper-option">
+          <p class="move-name paper">PAPER</p>
+        </button>
+        <button class="move-option scissors-option">
+          <p class="move-name scissors">SCISSORS</p>
+        </button>
+      </section>
+      <section class="result-section">
+        <p class="result"></p>
+      </section>
+      <section class="score-board">
+        <p class="user-score"></p>
+        <p class="comp-score"></p>
+      </section>
+      <section class="winner">
+        <p class="winner-display"></p>
+      </section>
+    </div>
+  </body>
+  <script src="index.js" type="module"></script>
 </html>
